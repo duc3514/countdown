@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient(to right top, #ff6f91, #ff7887, #ff817e, #ff8c76, #ff9671);
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.opacity {
+    opacity: 1 !important;
+    transition: .3s opacity ease-in;
+    z-index: 999 !important;
+
+}
+.form {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    width: 750px;
+    height: 400px;
+    transition: .3s opacity ease-in;
+    
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
+}
+.form-validate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.form-group {
+    position: relative;
+    margin: 0 5px;
+}
+.form-group input {
+    width: 80%;
+    padding: 15px 20px; 
+    border: none;
+    outline: none;
+    background-color: transparent;
+    z-index: 2;
+    font-size: 18px;
+    
+}
+
+.form-group input:hover ~ .title,.form-group input:focus, .form-group input:valid ~ .title {
+    top: -20px;
+    color: #845EC2;
+}
+.form-group input:valid {
+    color: #845EC2;
+
+}
+.form-group input:hover ~ .child, .form-control input:valid ~ .child {
+    background-color: #845EC2;
+    width: 80%;
+    transition: background-color .3s ease-in, width .3s ease;
+}
+.form-group .title {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    color: #845EC2;
+    padding: 15px 20px;
+    z-index: -1;
+}
+.form-group .child {
+    display: block;
+    position: absolute;
+    width: 80%;
+   
+    left: 20px;
+    height: 1px;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.form-count {
+    transition: .3s opacity ease-in;
+
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
+    width: 750px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-count .count {
+    background-color: #ebe9eb;
+    width: 140px;
+    color: #5f5e60;
+    height: 146px;
+    font-size: 70px;
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+.btn {
+    position: absolute;
+    padding: 15px 23px;
+    width: 220px;
+    border: none;
+    color: #fff;
+    outline: none;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-size: 20px;
+    cursor: pointer;
+    
+    transition: opacity .3s;
+    background-image: linear-gradient(to right top, #ff6f91, #ff7887, #ff817e, #ff8c76, #ff9671);
+}
+.btn:hover {
+    
+    opacity: 0.7;
+}
+.count:not(:last-child)::after {
+    content: ":";
+
+    right: -29px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+}

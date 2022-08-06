@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Down</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+    <div class="form opacity">
+        <div class="form-validate">
+            <div class="form-group">
+                <input id="h_val" value="0" type="number" class="input" placeholder="" required>
+                <span class="title">Nhập số giờ</span>
+                <span class="child"></span>
+            </div>
+            <div class="form-group">
+                <input id="m_val" value="0" type="number" class="input" placeholder="" required>
+                <span class="title">Nhập số phút</span>
+                <span class="child"></span>
+    
+            </div>
+            <div class="form-group">
+                <input id="s_val" value="35" type="number" class="input" placeholder="" required>
+                <span class="title">Nhập số giây</span>
+                <span class="child"></span>
+            </div>
+        </div>
+
+        <button class="btn btn-start">Start</button>
+    </div>
+    <div class="form-count ">
+        <div class="count" id="h">00</div>
+        <div class="count" id="m">00</div>
+        <div class="count" id="s">59</div>
+    </div>
+</body>
+    <script src="./assets/js/main.js"></script>
+</html>
